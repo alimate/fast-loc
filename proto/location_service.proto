@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service LocationService {
+  rpc set(DriverLocation) returns (Empty) {}
+}
+
+message DriverLocation {
+  string driverId = 1;
+  double lat = 2;
+  double long = 3;
+}
+
+message Empty {
+}
